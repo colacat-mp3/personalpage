@@ -11,8 +11,8 @@
                 background-repeat:no-repeat;
             }
             .left-list-style{
-                width:20%;
-                height:400px;
+                width:auto;
+                height:250px;
                 background-color:rgba(240,240,240,50%);
                 float: left;
             }
@@ -36,9 +36,25 @@
             }
             .center-part-div{
                 background-color:rgba(240,240,240,50%);
-                width: 75%;
+                width: 88%;
                 height:auto;
                 float: right;
+            }
+            .button-left-list{
+                letter-spacing: 0px;
+                width:auto;
+                background-color: rgba(0,0,0,50%);
+                font-size: 21px;
+                border: 2px solid rgb(36, 36, 36);
+                transition:letter-spacing 1s ease-in-out;
+                /*safari*/-webkit-transition:letter-spacing 1s ease-in-out;
+                color: white;
+            }
+            .button-left-list:hover{
+                background-color: rgba(0,0,0,75%);
+                font-size: 21px;
+                border: 2px solid rgb(150, 187, 255);
+                letter-spacing: 5px;
             }
         </style>       
 
@@ -50,10 +66,11 @@
 
         </div><br>
         <div id="left-list" class="left-list-style">
-            <p id="left-list-title" class="left-list-title-style"><strong>列表:</strong></p><br>
-            <p id="left-list-text" class="left-list-text-style">
-                基本信息<br>平台<br>游戏<br>项目<br>其他
-            </p><br>
+           <button id="left-button1" class="button-left-list">基本信息</button><br><br>
+           <button id="left-button2" class="button-left-list">活动平台</button><br><br>
+           <button id="left-button3" class="button-left-list">游戏</button><br><br>
+           <button id="left-button4" class="button-left-list">工具</button><br><br>
+           <button id="left-button5" class="button-left-list">项目</button><br><br>
             
         </div>
         <div id="center-part" class="center-part-div">
@@ -65,6 +82,7 @@
             <p>这是一个段落</p>
             <p>这是一个段落</p>
         </div>
+        
 
     </body>
 
