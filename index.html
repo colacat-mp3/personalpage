@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>colacatの个人主页</title>
+         
         <style>
             body{
                 background-image:url('https://colacat-mp3.github.io/personalpage/background_Amiya.png');
@@ -10,77 +11,107 @@
                 background-attachment:fixed;
                 background-repeat:no-repeat;
             }
-            .left-list-style{
-                width:auto;
-                height:250px;
-                background-color:rgba(240,240,240,50%);
-                float: left;
-            }
-            .left-list-title-style{
-                font-size:100%;
-                font-family: 'Courier New', Courier, monospace;
-                color: rgb(36, 36, 36);
-                text-align: left;
-                letter-spacing:0px;
-                transition:letter-spacing ease-in-out 1s;
-            }
-            .left-list-text-style{
-                font-size:100%;
-                font-family: 'Courier New', Courier, monospace;
-                color:rgb(36,36,36);
-                text-align:left;
-                letter-spacing:0px;
-            }
-            .left-list-title-style:hover{
-                letter-spacing:10px;
-            }
             .center-part-div{
-                background-color:rgba(240,240,240,50%);
-                width: 88%;
+                background-color:rgba(240,240,240,0.75);
+                width: 100%;
                 height:auto;
                 float: right;
+                visibility: visible;
             }
-            .button-left-list{
-                letter-spacing: 0px;
-                width:auto;
-                background-color: rgba(0,0,0,50%);
-                font-size: 21px;
-                border: 2px solid rgb(36, 36, 36);
-                transition:letter-spacing 1s ease-in-out;
-                /*safari*/-webkit-transition:letter-spacing 1s ease-in-out;
-                color: white;
-            }
-            .button-left-list:hover{
-                background-color: rgba(0,0,0,75%);
-                font-size: 21px;
-                border: 2px solid rgb(150, 187, 255);
-                letter-spacing: 5px;
-            }
-        </style>       
+
+            .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            letter-spacing:0px;
+            transition: 0.3s;
+            /*safari*/-webkit-transition: 0.3s;
+        }
+
+        .sidenav a:hover, .offcanvas a:focus{
+            color: #f1f1f1;
+            letter-spacing:10px;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+        </style>    
+        
 
     </head>
 
     <body>
-        <div id="header" style="width: 90%;height:100px;background-color:rgba(240,240,240,50%);float:top center;">
-            <h1 style="text-align: center;margin-bottom: 7px;">colacatの个人主页</h1>
+        <!--JavaScript-->
+        <script>
+            function openNav(){
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav(){
+                document.getElementById("mySidenav").style.width = "0px";
+            }
+            function jumptomain(){
+                document.getElementById("center-part-div").style.visibility = visible;
+            }
+        </script>
+
+        <!--顶部标题-->
+        <div id="header" style="width:100%;height:100px;background-color:rgba(240,240,240,0.2);float:top center;">
+            <h1 style="text-align: center;font-size:400%;">colacatの个人主页</h1>
 
         </div><br>
-        <div id="left-list" class="left-list-style">
-           <button id="left-button1" class="button-left-list">基本信息</button><br><br>
-           <button id="left-button2" class="button-left-list">活动平台</button><br><br>
-           <button id="left-button3" class="button-left-list">游戏</button><br><br>
-           <button id="left-button4" class="button-left-list">工具</button><br><br>
-           <button id="left-button5" class="button-left-list">项目</button><br><br>
-            
-        </div>
+
+        <!--侧边栏按钮-->
+        <span style="background-color:rgba(0, 0, 0, 0.2);font-size:30px;cursor:pointer;color: #f1f1f1;" onclick="openNav()">&#9776; 列表</span>
+        
+        <!--主页中间文本段-->
         <div id="center-part" class="center-part-div">
-            <h2>这是一个标题</h2>
-            <p>这是一个段落</p>
-            <p>这是一个段落</p>
-            <p>这是一个段落</p>
-            <p>这是一个段落</p>
-            <p>这是一个段落</p>
-            <p>这是一个段落</p>
+            <h2 style="font-size: 200%;">colacatの个人主页</h2>
+            <p>本网站有<a href="https://space.bilibili.com/1891590805?spm_id_from=333.1007.0.0">Colacat-MP3</a>制作。</p>
+            <p>感谢菜鸟教程为我提供了学习的空间、足够多且丰富的实例，让我学会了编写html和CSS</p>
+            <p>（好吧我JavaScript根本没学懂...）</p>
+            <p>总之，感谢你浏览这个网站！</p>
+            <p>本网站还在施工中，并会持续完善！</p>
+            <p>再一次感谢所有帮助我的盆友、平台与屏幕前的你！！！</p>
+            <hr>
+            <h3>网站更新日志（2023.2.4开始）</h3>
+            <p>2023.2.4---完善左侧列表，更新了中间的文字部分。</p>
+            <p>2023.2.5---删除了左侧的列表，换为侧边栏按钮，开始撰写主页部分的文本。</p>
+        </div>
+
+        <!--侧边栏内容-->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a>首页</a>
+            <a>基本信息</a>
+            <a>活动平台</a>
+            <a>游戏</a>
+            <a>工具</a>
+            <a>项目</a>
         </div>
         
 
