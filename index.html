@@ -6,10 +6,11 @@
          
         <style>
             body{
-                background-image:url('https://colacat-mp3.github.io/personalpage/background_Amiya.png');
+                background-image:url('https://colacat-mp3.github.io/personalpage/bg-Amiya-rain.jpg');
                 background-size:cover;
                 background-attachment:fixed;
                 background-repeat:no-repeat;
+                background-position: center;
             }
             .center-part-div{
                 background-color:rgba(240,240,240,0.75);
@@ -76,6 +77,11 @@
             }
             function jumptomain(){
                 document.getElementById("center-part-div").style.visibility = visible;
+                document.getElementById("body").style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-rain.jpg')";
+            }
+            function jumptointrodution(){
+                document.getElementById("body").style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-room.jpg')";
+                document.getElementById("center-part-div").style.height = "0px";
             }
         </script>
 
@@ -107,7 +113,7 @@
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a>首页</a>
-            <a>基本信息</a>
+            <a onclick="jumptointrodution()">基本信息</a>
             <a>活动平台</a>
             <a>游戏</a>
             <a>工具</a>
@@ -117,4 +123,4 @@
 
     </body>
 
-</html> 
+</html>
