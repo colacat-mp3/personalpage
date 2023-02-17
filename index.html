@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html> 
     <head>
         <meta charset="utf-8">
@@ -18,6 +18,7 @@
                 height:auto;
                 float: right;
                 visibility: visible;
+                display: block;
             }
 
             .sidenav {
@@ -33,7 +34,7 @@
             padding-top: 60px;
         }
 
-        .sidenav a {
+        .sidenav span {
             padding: 8px 8px 8px 32px;
             text-decoration: none;
             font-size: 25px;
@@ -44,7 +45,7 @@
             /*safari*/-webkit-transition: 0.3s;
         }
 
-        .sidenav a:hover, .offcanvas a:focus{
+        .sidenav span:hover, .offcanvas span:focus{
             color: #f1f1f1;
             letter-spacing:10px;
         }
@@ -59,7 +60,7 @@
 
         @media screen and (max-height: 450px) {
             .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
+            .sidenav span {font-size: 18px;}
         }
         </style>    
         
@@ -75,14 +76,8 @@
             function closeNav(){
                 document.getElementById("mySidenav").style.width = "0px";
             }
-            function jumptomain(){
-                document.getElementById("center-part-div").style.visibility = visible;
-                document.getElementById("body").style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-rain.jpg')";
-            }
-            function jumptointrodution(){
-                document.body.style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-room.jpg')";
-                document.getElementById("center-part").style.height = "0px";
-            }
+            
+            
         </script>
 
         <!--顶部标题-->
@@ -92,7 +87,8 @@
         </div><br>
 
         <!--侧边栏按钮-->
-        <span style="background-color:rgba(0, 0, 0, 0.2);font-size:30px;cursor:pointer;color: #f1f1f1;" onclick="openNav()">&#9776; 列表</span>
+        <div style="width: auto;height: 50px;background-color:rgba(240,240,240,0.2);"></div>
+            <span style="background-color:rgba(0, 0, 0, 0.2);font-size:30px;cursor:pointer;color: #f1f1f1;" onclick="openNav()">&#9776; 列表</span>
         
         <!--主页中间文本段-->
         <div id="center-part" class="center-part-div">
@@ -107,17 +103,28 @@
             <h3 style="font-size: 150%;">网站更新日志（2023.2.4开始）</h3>
             <p>2023.2.4---完善左侧列表，更新了中间的文字部分。</p>
             <p>2023.2.5---删除了左侧的列表，换为侧边栏按钮，开始撰写主页部分的文本。</p>
+            <p>2023.2.17--实现了页面的切换效果，introduction（基本信息）界面建设中。</p>
         </div>
 
+        <script>
+            function jumptointrodution(){
+                document.body.style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-room.jpg')";
+                document.getElementById("center-part").style.display="none";
+            }
+            function jumptomain(){
+                document.body.style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-rain.jpg')";
+                document.getElementById("center-part").style.display="block";
+            }
+        </script>
         <!--侧边栏内容-->
         <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a>首页</a>
-            <a onclick="jumptointrodution()">基本信息</a>
-            <a>活动平台</a>
-            <a>游戏</a>
-            <a>工具</a>
-            <a>项目</a>
+            <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span><br>
+            <span onclick="jumptomain()">首页</span><br>
+            <span  onclick="jumptointrodution()">基本信息</span><br>
+            <span >活动平台</span><br>
+            <span >游戏</span><br>
+            <span >工具</span><br>
+            <span >项目</span><br>
         </div>
         
 
