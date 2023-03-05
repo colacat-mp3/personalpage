@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <title>colacatの个人主页</title>
+         
+        <style>
+            body{
+                background-image:url('https://colacat-mp3.github.io/personalpage/bg-Amiya-rain.jpg');
+                background-size:cover;
+                background-attachment:fixed;
+                background-repeat:no-repeat;
+                background-position: center;
+            }
+            .center-part-div{
+                background-color:rgba(240,240,240,0.75);
+                width: 100%;
+                height:auto;
+                float: right;
+                visibility: visible;
+                display: block;
+            }
+
+            .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav span {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            letter-spacing:0px;
+            transition: 0.3s;
+            /*safari*/-webkit-transition: 0.3s;
+        }
+
+        .sidenav span:hover, .offcanvas span:focus{
+            color: #f1f1f1;
+            letter-spacing:10px;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .hidden{
+            background_color:rgba(0,0,0,1);
+            color:rgba(0,0,0,1);
+            transition:all 1s;
+            -webkit-transition:all 1s;
+        }
+        .hidden:hover{
+            background-color:rgba(0,0,0,0);
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav span {font-size: 18px;}
+        }
+        </style>    
+        
+
+    </head>
+
+    <body>
+        <!--JavaScript-->
+        <script>
+            function openNav(){
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav(){
+                document.getElementById("mySidenav").style.width = "0px";
+            }
+            
+            
+        </script>
+
+        <!--顶部标题-->
+        <div id="header" style="width:100%;height:100px;background-color:rgba(240,240,240,0.2);float:top center;">
+            <h1 style="text-align: center;font-size:400%;">colacatの个人主页</h1>
+
+        </div><br>
+
+        <!--侧边栏按钮-->
+        <div style="width: auto;height: 50px;background-color:rgba(240,240,240,0.2);"></div>
+            <span style="background-color:rgba(0, 0, 0, 0.2);font-size:30px;cursor:pointer;color: #f1f1f1;" onclick="openNav()">&#9776; 列表</span>
+        
+        <!--主页中间文本段-->
+        <div id="center-part" class="center-part-div">
+            <h2 style="font-size: 200%;">colacatの个人主页</h2>
+            <p style="font-size: 125%;">本网站由<a href="https://space.bilibili.com/1891590805?spm_id_from=333.1007.0.0">Colacat-MP3</a>制作。</p>
+            <p style="font-size: 125%;">感谢菜鸟教程为我提供了学习的空间、足够多且丰富的实例，让我学会了编写html和CSS</p>
+            <p style="font-size: 125%;">（好吧我JavaScript根本没学懂...）</p>
+            <p style="font-size: 125%;">总之，感谢你浏览这个网站！</p>
+            <p style="font-size: 125%;">本网站还在施工中，并会持续完善！</p>
+            <p style="font-size: 125%;">再一次感谢所有帮助我的盆友、平台与屏幕前的你！！！&#128513</p>
+            <hr>
+            <h3 style="font-size: 150%;">网站更新日志（2023.2.4开始）</h3>
+            <p>2023.2.4---完善左侧列表，更新了中间的文字部分。</p>
+            <p>2023.2.5---删除了左侧的列表，换为侧边栏按钮，开始撰写主页部分的文本。</p>
+            <p>2023.2.17--实现了页面的切换效果，introduction（基本信息）界面建设中。</p>
+        </div>
+
+        <!--介绍页-->
+        <div id="introduction_part" class="">
+            <h2 style="font-size:150%">个人简介</h2>
+            <p>Colacat-mp3</p>
+            <p>年龄 : *（保密）</p>
+            <p>地区 : 中国 / 广东 / **(保密)</p>
+            <p>种族 : 菲林<span style=></span>           
+        <script>
+            function jumptointrodution(){
+                document.body.style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-room.jpg')";
+                document.getElementById("center-part").style.display="none";
+            }
+            function jumptomain(){
+                document.body.style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-rain.jpg')";
+                document.getElementById("center-part").style.display="block";
+            }
+        </script>
+        <!--侧边栏内容-->
+        <div id="mySidenav" class="sidenav">
+            <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span><br>
+            <span onclick="jumptomain()">首页</span><br>
+            <span  onclick="jumptointrodution()">基本信息</span><br>
+            <span >活动平台</span><br>
+            <span >游戏</span><br>
+            <span >工具</span><br>
+            <span >项目</span><br>
+        </div>
+        
+
+    </body>
+
+</html>
