@@ -31,6 +31,14 @@
                 display: none;
 
             }
+            .gamepartdiv{
+                background-color:rgba(240,240,240,0.75);
+                width: 100%;
+                height:auto;
+                float: right;
+                visibility: visible;
+                display: none;
+            }
 
             .sidenav {
             height: 100%;
@@ -140,9 +148,10 @@
             <p></p>
         </div>     
         <!--游戏页-->
-        <div id="game-part" class="gamepartdiv">
+        <div id="game-part" class="gamepartdiv" onload="rechange()">
             <a href="https://colacat-mp3.github.io/pec/Operation Basepoint.zip">Operation Basepoint自制谱</a>
             <p id="objindu">   </p>
+            <p>制作进度：20%</p>
         </div>
         <script>
             function rechange(){
@@ -202,11 +211,19 @@
                 document.body.style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-room.jpg')";
                 document.getElementById("center-part").style.display="none";
                 document.getElementById("introduction_part").style.display="block";
+                document.getElementById("game-part").style.display="none";
             }
             function jumptomain(){
                 document.body.style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-rain.jpg')";
                 document.getElementById("center-part").style.display="block";
                 document.getElementById("introduction_part").style.display="none";
+                document.getElementById("game-part").style.display="none";
+            }
+            function jumptogame(){
+                document.body.style.backgroundImage="url('https://colacat-mp3.github.io/personalpage/bg-Amiya-rain.jpg')";
+                document.getElementById("center-part").style.display="none";
+                document.getElementById("introduction_part").style.display="none";
+                document.getElementById("game-part").style.display="block";
             }
         </script>
         <!--侧边栏内容-->
@@ -215,7 +232,7 @@
             <span onclick="jumptomain()">首页</span><br>
             <span  onclick="jumptointrodution()">基本信息</span><br>
             <span >活动平台</span><br>
-            <span >游戏</span><br>
+            <span onclick="jumptogame()">游戏</span><br>
             <span >工具</span><br>
             <span >项目</span><br>
         </div>
